@@ -1,0 +1,66 @@
+.convertor {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 10px 20px 0 #b3bbc673;
+    border-radius: 10px;
+    background-color: #ffffff;
+    &__title {
+        font-size: 25px;
+        color: #1c34b8;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__input {
+        outline: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid #6b6a6a;
+        font-size: 20px;
+        &:focus {
+            border-color: #1c34b8;
+        }
+    }
+    &__select {
+        padding: 5px 10px;
+        outline: none;
+        border-radius: 5px;
+        border: 2px solid #6b6a6a;
+        &:focus {
+            border-color: #1c34b8;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__curr {
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: color 0.2s linear, background-color 0.2s linear;
+        &:hover {
+            background-color: #1c34b8;
+            color: #ffffff;
+        }
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}

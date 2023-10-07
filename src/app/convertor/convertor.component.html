@@ -1,0 +1,40 @@
+<div class="convertor">
+    <h1 class="convertor__title">Convertor</h1>
+    <div class="convertor__main">
+        <div class="convertor__item">
+            <select
+                [(ngModel)]="currencyOne"
+                (ngModelChange)="onCurrencyChange('one')" 
+                class="convertor__select"
+            >
+                <option *ngFor="let currency of allCurrencies" [value]="currency">{{ currency }}</option>
+            </select>
+            <input 
+                [(ngModel)] = "numOne" 
+                (ngModelChange)="onNumChange('one')"
+                class="convertor__input" 
+                type="number" 
+                placeholder="Type..." 
+                name="currencyOne"
+            >
+        </div>
+
+        <div class="convertor__item">
+            <select
+            [(ngModel)]="currencyTwo"
+            (ngModelChange)="onCurrencyChange('two')"  
+            class="convertor__select"
+            >
+                <option *ngFor="let currency of allCurrencies" [value]="currency">{{ currency }}</option>
+            </select>
+            <input 
+                [(ngModel)] = "numTwo"
+                (ngModelChange)="onNumChange('two')"
+                class="convertor__input"
+                type="number"
+                placeholder="Type..."
+                name="currencyOne"
+            >
+        </div>
+    </div>
+</div>
