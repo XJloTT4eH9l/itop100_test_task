@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 
 export class ConvertorComponent {
   allCurrencies: string[] = [];
+  mainCurencies: string[] = ['USD', 'EUR', 'UAH'];
   conversionRate: number = 0.02753;
 
   currencyOne: string = 'USD';
@@ -46,6 +47,17 @@ export class ConvertorComponent {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  onListClick(currency: string, pos: string): void {
+    if(pos === 'one') {
+      this.currencyOne = currency;
+    }
+    if(pos === 'two') {
+      this.currencyTwo = currency;
+    }
+
+    this.onCurrencyChange(pos)
   }
 
   ngOnInit(): void {

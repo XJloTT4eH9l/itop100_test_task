@@ -17,6 +17,15 @@
                 placeholder="Type..." 
                 name="currencyOne"
             >
+            <ul class="convertor__list">
+                <li 
+                    *ngFor="let currency of mainCurencies"
+                    (click)="onListClick(currency, 'one')"
+                    class="convertor__curr"
+                >
+                    {{ currency }}
+                </li>
+            </ul>
         </div>
 
         <div class="convertor__item">
@@ -35,6 +44,15 @@
                 placeholder="Type..."
                 name="currencyOne"
             >
+            <ul class="convertor__list">
+                <li 
+                    *ngFor="let currency of mainCurencies"
+                    (click)="onListClick(currency, 'two')"
+                    class="convertor__curr"
+                >
+                    {{ currency }}
+                </li>
+            </ul>
         </div>
     </div>
 </div>
